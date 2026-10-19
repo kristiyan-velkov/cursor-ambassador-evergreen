@@ -3,7 +3,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import { Globe, Linkedin } from 'lucide-react';
+import { Globe, Link as LinkIcon } from 'lucide-react';
 import { siGithub, siX } from 'simple-icons';
 import { ambassadors } from '@/content/ambassadors';
 import { siteConfig } from '@/content/site.config';
@@ -27,7 +27,7 @@ type SocialIconProps = {
 
 const SocialIcon: React.FC<SocialIconProps> = ({ kind }) => {
 	if (kind === 'x') return <BrandIcon iconPath={siX.path} />;
-	if (kind === 'linkedin') return <Linkedin className="w-4 h-4" />;
+	if (kind === 'linkedin') return <LinkIcon className="w-4 h-4" />;
 	if (kind === 'github') return <BrandIcon iconPath={siGithub.path} />;
 	return <Globe className="w-4 h-4" />;
 };
